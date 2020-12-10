@@ -1,0 +1,100 @@
+/* FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
+
+/* ROOT */
+:root {
+  --font: 'Lato', sans-serif;
+  --bgColor: #ffffff;
+  --fontColor: #018ccf;
+  --primaryColor: #018ccf;
+  --secondaryColor: #006190;
+  --tertiaryColor: #004262;
+}
+
+/* GENERAL */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-size: 15px;
+  font-family: var(--font);
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  height: 90px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* LOGO CONTAINER */
+.logo-container {
+  display: flex;
+  font-size: 3rem;
+  margin-left: 40px;
+}
+
+.fa-bath {
+  color: var(--primaryColor);
+  transition: all 0.2s ease-in-out;
+}
+
+.fa-bath:hover {
+  color: var(--tertiaryColor);
+}
+
+/* LINKS CONTAINER */
+.links-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-right: 50px;
+}
+
+/* Navbar */
+.nav-ul {
+  display: flex;
+  flex-direction: row;
+}
+
+li {
+  font-size: 1.2rem;
+  font-weight: 700;
+  list-style-type: none;
+  margin: 0 15px;
+}
+
+a {
+  text-decoration: none;
+  color: var(--fontColor);
+  transition: all 0.2s ease-in-out;
+}
+
+a:hover {
+  color: var(--tertiaryColor);
+}
+
+/* Button */
+.btn {
+  height: 50px;
+  width: 140px;
+  border: none;
+  background-color: var(--secondaryColor);
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 1.1rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn:hover {
+  background-color: var(--tertiaryColor);
+}
