@@ -76,9 +76,7 @@ li {
   transition: all 0.2s ease-in-out;
 }
 
-.static:hover {
-  color: var(--tertiaryColor);
-}
+/* FIRST Li */
 
 .static::before {
   content: '';
@@ -91,6 +89,10 @@ li {
   transition-duration: 0.2s;
   opacity: 1;
   background-color: var(--primaryColor);
+}
+
+.static:hover::before {
+  background-color: var(--tertiaryColor);
 }
 
 /* Li with efects */
