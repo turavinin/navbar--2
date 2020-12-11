@@ -64,14 +64,63 @@ body {
 .nav-ul {
   display: flex;
   flex-direction: row;
+  margin-right: 10px;
 }
 
 li {
+  position: relative;
   font-size: 1.2rem;
   font-weight: 700;
   list-style-type: none;
   margin: 0 15px;
+  transition: all 0.2s ease-in-out;
 }
+
+.static:hover {
+  color: var(--tertiaryColor);
+}
+
+.static::before {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  width: 100%;
+  height: 3px;
+  margin: 5px 0 0;
+  transition: all 0.2s ease-in-out;
+  transition-duration: 0.2s;
+  opacity: 1;
+  background-color: var(--primaryColor);
+}
+
+/* Li with efects */
+
+.hovered::before,
+.hovered::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  width: 0%;
+  height: 3px;
+  margin: 5px 0 0;
+  transition: all 0.2s ease-in-out;
+  transition-duration: 0.2s;
+  opacity: 0;
+  left: 0;
+  background-color: var(--tertiaryColor);
+}
+
+.hovered:hover {
+  cursor: pointer;
+}
+
+.hovered:hover::after,
+.hovered:hover::before {
+  width: 100%;
+  opacity: 1;
+}
+
+/* a */
 
 a {
   text-decoration: none;
