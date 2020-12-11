@@ -47,8 +47,13 @@ body {
   transition: all 0.2s ease-in-out;
 }
 
+/* .logo-container:hover {
+  font-size: 5rem;
+} */
+
 .fa-bath:hover {
   color: var(--tertiaryColor);
+  font-size: 3.4rem;
 }
 
 /* LINKS CONTAINER */
