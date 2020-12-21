@@ -1,6 +1,6 @@
 /* ------------------- FONTS ------------------ */
 
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap');
 
 /* ----------------- VARIABLES ---------------- */
 
@@ -14,7 +14,7 @@ $headerTertiaryColor: #004262;
 
 :root {
   font-size: 15px;
-  font-family: 'Roboto Mono', monospace;
+  font-family: 'Roboto', sans-serif;
 }
 
 /* ------------------ GENERAL ----------------- */
@@ -79,7 +79,7 @@ body {
   &__item {
     position: relative;
     font-size: 1.2rem;
-    font-weight: 700;
+    font-weight: 500;
     list-style-type: none;
     margin: 0 15px;
     transition: all 0.2s ease-in-out;
