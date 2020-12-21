@@ -181,4 +181,47 @@ body {
 .fresh__button:hover {
   background-color: #004262;
 }
+
+/* ------------------ MOBILE ------------------ */
+@media only screen and (max-width: 768px) {
+  /* GENERAL */
+  html,
+  body {
+    overflow-x: hidden;
+    height: 100vh;
+  }
+  /* HEADER */
+  .header {
+    position: relative;
+    /* NAVIGATOR */
+  }
+  .header__navigator {
+    position: absolute;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 100vh;
+    width: 500px;
+    margin: 0;
+    padding: 0;
+    top: 0;
+    right: 0;
+    overflow-x: hidden;
+    border: 1px solid red;
+  }
+  /* HAMBURGER */
+  .hamburger {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 2;
+  }
+  .hamburger__line {
+    width: 40px;
+    height: 3px;
+    margin: 0 0 3px 0;
+    background-color: #006190;
+  }
+}
 /*# sourceMappingURL=styles.css.map */
