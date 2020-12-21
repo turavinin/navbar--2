@@ -1,0 +1,159 @@
+/* ------------------- FONTS ------------------ */
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
+
+/* ----------------- VARIABLES ---------------- */
+
+$bgPrimaryColor: #ffffff;
+$fontPrimaryColor: #018ccf;
+$headerPrimaryColor: #018ccf;
+$headerSecondaryColor: #006190;
+$headerTertiaryColor: #004262;
+
+/* ------------------- ROOT ------------------- */
+
+:root {
+  font-size: 15px;
+  font-family: 'Roboto Mono', monospace;
+}
+
+/* ------------------ GENERAL ----------------- */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ------------------ HEADER ------------------ */
+
+.header {
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  height: 90px;
+  justify-content: space-between;
+  align-items: center;
+
+  /* LOGO */
+  &__logo {
+    display: flex;
+    font-size: 3rem;
+    margin-left: 40px;
+
+    .fa-bath {
+      color: $headerPrimaryColor;
+      transition: all 0.2s ease-in-out;
+    }
+
+    .fa-bath:hover {
+      color: $headerTertiaryColor;
+      font-size: 3.4rem;
+    }
+  }
+
+  /* NAVIGATOR */
+  &__navigator {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-right: 50px;
+  }
+}
+
+/* NAVBAR */
+.navbar {
+  &__list {
+    display: flex;
+    flex-direction: row;
+    margin-right: 10px;
+  }
+
+  /* Items */
+  &__item {
+    position: relative;
+    font-size: 1.2rem;
+    font-weight: 700;
+    list-style-type: none;
+    margin: 0 15px;
+    transition: all 0.2s ease-in-out;
+
+    /* Static Item */
+    &--static::before {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      width: 100%;
+      height: 3px;
+      margin: 5px 0 0;
+      transition: all 0.2s ease-in-out;
+      transition-duration: 0.2s;
+      opacity: 1;
+      background-color: $headerPrimaryColor;
+    }
+
+    &--static:hover::before {
+      background-color: $headerTertiaryColor;
+    }
+
+    /* Hovered Items */
+    &--hovered::before,
+    &--hovered::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      width: 0%;
+      height: 3px;
+      margin: 5px 0 0;
+      transition: all 0.2s ease-in-out;
+      transition-duration: 0.2s;
+      opacity: 0;
+      left: 0;
+      background-color: $headerTertiaryColor;
+    }
+
+    &--hovered:hover {
+      cursor: pointer;
+    }
+
+    &--hovered:hover::after,
+    &--hovered:hover::before {
+      width: 100%;
+      opacity: 1;
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    color: $fontPrimaryColor;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      color: $headerTertiaryColor;
+    }
+  }
+}
+
+/* FRESH (BTN) */
+.fresh {
+  &__button {
+    height: 50px;
+    width: 140px;
+    border: none;
+    background-color: $headerSecondaryColor;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 1.1rem;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      background-color: $headerTertiaryColor;
+    }
+  }
+}

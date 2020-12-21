@@ -3,7 +3,10 @@
   <head>
     <!-- META -->
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
+    />
 
     <!-- FONT AWESOME -->
     <script
@@ -24,22 +27,46 @@
   </head>
 
   <body>
+    <!-- HEADER -->
     <header class="header">
-      <div class="logo-container">
+      <!-- LOGO -->
+      <div class="header__logo">
         <i class="fas fa-bath"></i>
       </div>
-      <div class="links-container">
-        <div class="navbar-wrapper">
-          <ul class="nav-ul">
-            <li class="static"><a href="#">Water</a></li>
-            <li class="hovered"><a href="#">Soap</a></li>
-            <li class="hovered"><a href="#">Shampoo</a></li>
-            <li class="hovered"><a href="#">Towel</a></li>
-            <li class="hovered"><a href="#">Music</a></li>
+
+      <!-- HAMBURGER -->
+      <div class="hamburger">
+        <div class="hamburger__line hamburger__line1"></div>
+        <div class="hamburger__line hamburger__line2"></div>
+        <div class="hamburger__line hamburger__line3"></div>
+      </div>
+
+      <!-- NAVIGATOR -->
+      <div class="header__navigator">
+        <!-- NAVBAR -->
+        <nav class="navbar">
+          <ul class="navbar__list">
+            <li class="navbar__item navbar__item--static">
+              <a href="#">Water</a>
+            </li>
+            <li class="navbar__item navbar__item--hovered">
+              <a class="navbar__link" href="#">Soap</a>
+            </li>
+            <li class="navbar__item navbar__item--hovered">
+              <a class="navbar__link" href="#">Shampoo</a>
+            </li>
+            <li class="navbar__item navbar__item--hovered">
+              <a class="navbar__link" href="#">Towel</a>
+            </li>
+            <li class="navbar__item navbar__item--hovered">
+              <a class="navbar__link" href="#">Music</a>
+            </li>
           </ul>
-        </div>
-        <div class="btn-wrapper">
-          <button class="btn">Keep Fresh</button>
+        </nav>
+
+        <!-- BUTTON -->
+        <div class="fresh">
+          <button class="fresh__button">Keep Fresh</button>
         </div>
       </div>
     </header>
